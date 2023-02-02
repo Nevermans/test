@@ -1,0 +1,17 @@
+#!/bin/bash
+# kislobot
+
+case "$1" in
+  start)
+    python3 /root/kislorod/bottg/kislobot ver1.py
+    ;;
+  stop)
+    pkill -f "python3 /root/kislorod/bottg/kislobot ver1.py"
+    ;;
+  *)
+    echo "Usage: /etc/init.d/kislobot {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
